@@ -1,18 +1,18 @@
-import useSessionstorage from '@rooks/use-sessionstorage';
+import useSessionstorage from "@rooks/use-sessionstorage";
 
 //internal import
-import Layout from '@layout/Layout';
-import Banner from '@component/banner/Banner';
-import CardTwo from '@component/cta-card/CardTwo';
-import OfferCard from '@component/offer/OfferCard';
-import StickyCart from '@component/cart/StickyCart';
-import ProductServices from '@services/ProductServices';
-import ProductCard from '@component/product/ProductCard';
-import MainCarousel from '@component/carousel/MainCarousel';
-import FeatureCategory from '@component/category/FeatureCategory';
+import Layout from "@layout/Layout";
+import Banner from "@component/banner/Banner";
+import CardTwo from "@component/cta-card/CardTwo";
+import OfferCard from "@component/offer/OfferCard";
+import StickyCart from "@component/cart/StickyCart";
+import ProductServices from "@services/ProductServices";
+import ProductCard from "@component/product/ProductCard";
+import MainCarousel from "@component/carousel/MainCarousel";
+import FeatureCategory from "@component/category/FeatureCategory";
 
 const Home = ({ products, popularProducts, discountProducts }) => {
-  const [value, set] = useSessionstorage('products', products);
+  const [value, set] = useSessionstorage("products", products);
 
   return (
     <>
@@ -62,7 +62,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
                 <p className="text-base font-sans text-gray-600 leading-6">
                   See all our popular products in this week. You can choose your
                   daily needs products from this list and get some special offer
-                  with free shipping.
+                  with free delivery.
                 </p>
               </div>
             </div>
@@ -98,7 +98,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
                 </h2>
                 <p className="text-base font-sans text-gray-600 leading-6">
                   See Our latest discounted products below. Choose your daily
-                  needs from here and get a special discount with free shipping.
+                  needs from here and get a special discount with free delivery.
                 </p>
               </div>
             </div>
