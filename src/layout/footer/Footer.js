@@ -1,17 +1,17 @@
-import React, { useContext } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
+import React, { useContext } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import {
   FacebookIcon,
   LinkedinIcon,
   PinterestIcon,
   TwitterIcon,
   WhatsappIcon,
-} from 'react-share';
+} from "react-share";
 
 //internal import
-import { UserContext } from '@context/UserContext';
+import { UserContext } from "@context/UserContext";
 
 const Footer = () => {
   const {
@@ -99,21 +99,21 @@ const Footer = () => {
             </h3>
             <ul className="text-sm lg:text-15px flex flex-col space-y-3">
               <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? '/user/dashboard' : '#'}`}>
+                <Link href={`${userInfo?.email ? "/user/dashboard" : "#"}`}>
                   <a className="text-gray-600 inline-block w-full hover:text-emerald-500">
                     Dashboard
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? '/user/my-orders' : '#'}`}>
+                <Link href={`${userInfo?.email ? "/user/my-orders" : "#"}`}>
                   <a className="text-gray-600 inline-block w-full hover:text-emerald-500">
                     My Orders
                   </a>
                 </Link>
               </li>
               <li className="flex items-baseline">
-                <Link href={`${userInfo?.email ? '/user/dashboard' : '#'}`}>
+                <Link href={`${userInfo?.email ? "/user/dashboard" : "#"}`}>
                   <a className="text-gray-600 inline-block w-full hover:text-emerald-500">
                     Recent Orders
                   </a>
@@ -121,7 +121,7 @@ const Footer = () => {
               </li>
               <li className="flex items-baseline">
                 <Link
-                  href={`${userInfo?.email ? '/user/update-profile' : '#'}`}
+                  href={`${userInfo?.email ? "/user/update-profile" : "#"}`}
                 >
                   <a className="text-gray-600 inline-block w-full hover:text-emerald-500">
                     Updated Profile
@@ -229,7 +229,9 @@ const Footer = () => {
               <p className="text-base leading-7 font-medium block">
                 Call Us Today!
               </p>
-              <h5 className="text-2xl font-bold text-emerald-500 leading-7">+012345-67900</h5>
+              <h5 className="text-2xl font-bold text-emerald-500 leading-7">
+                +012345-67900
+              </h5>
             </div>
             <div className="col-span-1 hidden lg:block md:block">
               <ul className="lg:text-right">
@@ -250,7 +252,7 @@ const Footer = () => {
 
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex justify-center py-4">
         <p className="text-sm text-gray-500 leading-6">
-          Copyright 2022 @{' '}
+          Copyright 2022 @{" "}
           <Link href="https://themeforest.net/user/htmllover">
             <a
               target="_blank"

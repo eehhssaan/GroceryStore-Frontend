@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   FiDollarSign,
   FiHome,
@@ -7,7 +7,7 @@ import {
   FiShieldOff,
   FiSun,
   FiTruck,
-} from 'react-icons/fi';
+} from "react-icons/fi";
 
 const Card = () => {
   return (
@@ -17,7 +17,7 @@ const Card = () => {
           <FiTruck />
         </span>
         <p className="font-sans leading-5 text-sm text-gray-500">
-          Free shipping apply to all orders over shipping{' '}
+          Free delivery apply to all orders over delivery{" "}
           <span className="font-semibold">$100</span>
         </p>
       </li>
