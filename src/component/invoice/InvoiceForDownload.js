@@ -182,7 +182,7 @@ const InvoiceForDownload = ({ data }) => {
               <Text style={styles.info}>{data.name}</Text>
               <Text style={styles.info}> {data.address.substring(0, 25)}</Text>
               <Text style={styles.info}>
-                {data.city}, {data.country}, {data.zipCode}
+                {data.area}, {data.district}, {data.zipCode}
               </Text>
             </View>
           </View>

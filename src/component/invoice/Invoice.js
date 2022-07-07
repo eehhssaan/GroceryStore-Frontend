@@ -56,7 +56,7 @@ const Invoice = ({ data, printRef }) => {
               <br />
               {data.address}
               <br />
-              {data.city}, {data.country}, {data.zipCode}
+              {data.area}, {data.district}, {data.zipCode}
             </span>
           </div>
         </div>

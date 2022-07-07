@@ -105,7 +105,7 @@ const Checkout = () => {
 
                   <div className="form-group mt-12">
                     <h2 className="font-semibold font-serif text-base text-gray-700 pb-3">
-                      02. Shipping Details
+                      02. Delivery Details
                     </h2>
 
                     <div className="grid grid-cols-6 gap-6 mb-8">
@@ -123,23 +123,23 @@ const Checkout = () => {
                       <div className="col-span-6 sm:col-span-6 lg:col-span-2">
                         <InputArea
                           register={register}
-                          label="City"
-                          name="city"
+                          label="Area"
+                          name="area"
                           type="text"
-                          placeholder="Los Angeles"
+                          placeholder="San Po Kong"
                         />
-                        <Error errorName={errors.city} />
+                        <Error errorName={errors.area} />
                       </div>
 
                       <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                         <InputArea
                           register={register}
-                          label="Country"
-                          name="country"
+                          label="District"
+                          name="district"
                           type="text"
-                          placeholder="United States"
+                          placeholder="Wong Tai Sin"
                         />
-                        <Error errorName={errors.country} />
+                        <Error errorName={errors.district} />
                       </div>
 
                       {/* <div className="col-span-6 sm:col-span-3 lg:col-span-2">
@@ -154,7 +154,7 @@ const Checkout = () => {
                       </div> */}
                     </div>
 
-                    <Label label="Delivery Cost" />
+                    {/* <Label label="Delivery Cost" />
                     <div className="grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
                         <InputDelivery
@@ -177,7 +177,7 @@ const Checkout = () => {
                         />
                         <Error errorName={errors.shippingOption} />
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="form-group mt-12">
