@@ -63,11 +63,11 @@ const pages = [
     href: "/terms-and-conditions",
     icon: HiOutlineDocumentText,
   },
-  {
-    title: "404",
-    href: "/404",
-    icon: FiAlertCircle,
-  },
+  // {
+  //   title: "404",
+  //   href: "/404",
+  //   icon: FiAlertCircle,
+  // },
 ];
 
 const userSidebar = [
@@ -184,14 +184,6 @@ const contactData = [
     icon: FiPhoneCall,
     contact: "029-00124667",
     className: "bg-yellow-100",
-  },
-  {
-    id: 3,
-    title: "Location",
-    info: "Cecilia Chapman, 561-4535 Nulla LA, United States 96522",
-    icon: FiMapPin,
-    contact: "",
-    className: "bg-indigo-100",
   },
 ];
 

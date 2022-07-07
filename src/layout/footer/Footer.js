@@ -133,7 +133,7 @@ const Footer = () => {
                   </a>
                 </Link>
               </li>
-              <li className="flex items-baseline">
+              {/* <li className="flex items-baseline">
                 <Link href="#">
                   <a className="text-gray-600 inline-block w-full hover:text-emerald-500">
                     Careers
@@ -146,7 +146,7 @@ const Footer = () => {
                     Latest news
                   </a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="pb-3.5 sm:pb-0 col-span-1 md:col-span-2 lg:col-span-3">
@@ -204,13 +204,13 @@ const Footer = () => {
                   </a>
                 </Link>
               </li>
-              <li className="flex items-baseline">
+              {/* <li className="flex items-baseline">
                 <Link href={`${userInfo?.email ? "/user/dashboard" : "#"}`}>
                   <a className="text-gray-600 inline-block w-full hover:text-emerald-500">
                     Recent Orders
                   </a>
                 </Link>
-              </li>
+              </li> */}
               <li className="flex items-baseline">
                 <Link
                   href={`${userInfo?.email ? "/user/update-profile" : "#"}`}
@@ -251,6 +251,9 @@ const Footer = () => {
 
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex justify-center py-4">
         <p className="text-sm text-gray-500 leading-6">
+          Copyright 2022 @Ehsan, All rights reserved.
+        </p>
+        {/* <p className="text-sm text-gray-500 leading-6">
           Copyright 2022 @{" "}
           <Link href="https://themeforest.net/user/htmllover">
             <a
@@ -258,11 +261,11 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-emerald-500"
             >
-              HtmlLover
+              Ehsan
             </a>
           </Link>
           , All rights reserved.
-        </p>
+        </p> */}
       </div>
     </div>
   );
