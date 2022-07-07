@@ -142,7 +142,7 @@ const Checkout = () => {
                         <Error errorName={errors.country} />
                       </div>
 
-                      <div className="col-span-6 sm:col-span-3 lg:col-span-2">
+                      {/* <div className="col-span-6 sm:col-span-3 lg:col-span-2">
                         <InputArea
                           register={register}
                           label="ZIP / Postal"
@@ -151,7 +151,7 @@ const Checkout = () => {
                           placeholder="2345"
                         />
                         <Error errorName={errors.zipCode} />
-                      </div>
+                      </div> */}
                     </div>
 
                     <Label label="Delivery Cost" />
