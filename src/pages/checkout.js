@@ -202,7 +202,7 @@ const Checkout = () => {
                         <Error errorName={errors.paymentMethod} />
                       </div>
 
-                      <div className="col-span-6 sm:col-span-3">
+                      {/* <div className="col-span-6 sm:col-span-3">
                         <InputPayment
                           setShowCard={setShowCard}
                           register={register}
@@ -211,7 +211,7 @@ const Checkout = () => {
                           Icon={ImCreditCard}
                         />
                         <Error errorName={errors.paymentMethod} />
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
