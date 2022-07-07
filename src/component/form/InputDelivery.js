@@ -1,7 +1,7 @@
-import React from 'react';
-import { FiTruck } from 'react-icons/fi';
+import React from "react";
+import { FiTruck } from "react-icons/fi";
 
-const InputShipping = ({ register, value, time, cost, handleShippingCost }) => {
+const InputDelivery = ({ register, value, time, cost, handleShippingCost }) => {
   return (
     <div>
       <div className="p-3 card border border-gray-200 bg-white rounded-md">
@@ -16,7 +16,7 @@ const InputShipping = ({ register, value, time, cost, handleShippingCost }) => {
                   {value}
                 </h6>
                 <p className="text-xs text-gray-500 font-medium">
-                  Delivery: {time}{' '}
+                  Delivery: {time}{" "}
                   <span className="font-medium text-gray-600">
                     Cost : ${cost}.00
                   </span>
@@ -40,4 +40,4 @@ const InputShipping = ({ register, value, time, cost, handleShippingCost }) => {
   );
 };
 
-export default InputShipping;
+export default InputDelivery;

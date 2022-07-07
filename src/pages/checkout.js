@@ -1,24 +1,24 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
-import { CardElement } from '@stripe/react-stripe-js';
-import Link from 'next/link';
+import React from "react";
+import dynamic from "next/dynamic";
+import { CardElement } from "@stripe/react-stripe-js";
+import Link from "next/link";
 import {
   IoReturnUpBackOutline,
   IoArrowForward,
   IoBagHandle,
   IoWalletSharp,
-} from 'react-icons/io5';
-import { ImCreditCard } from 'react-icons/im';
+} from "react-icons/io5";
+import { ImCreditCard } from "react-icons/im";
 
 //internal import
-import Layout from '@layout/Layout';
-import Label from '@component/form/Label';
-import Error from '@component/form/Error';
-import CartItem from '@component/cart/CartItem';
-import InputArea from '@component/form/InputArea';
-import InputShipping from '@component/form/InputShipping';
-import InputPayment from '@component/form/InputPayment';
-import useCheckoutSubmit from '@hooks/useCheckoutSubmit';
+import Layout from "@layout/Layout";
+import Label from "@component/form/Label";
+import Error from "@component/form/Error";
+import CartItem from "@component/cart/CartItem";
+import InputArea from "@component/form/InputArea";
+import InputDelivery from "@component/form/InputDelivery";
+import InputPayment from "@component/form/InputPayment";
+import useCheckoutSubmit from "@hooks/useCheckoutSubmit";
 
 const Checkout = () => {
   const {
@@ -154,10 +154,10 @@ const Checkout = () => {
                       </div>
                     </div>
 
-                    <Label label="Shipping Cost" />
+                    <Label label="Delivery Cost" />
                     <div className="grid grid-cols-6 gap-6">
                       <div className="col-span-6 sm:col-span-3">
-                        <InputShipping
+                        <InputDelivery
                           handleShippingCost={handleShippingCost}
                           register={register}
                           value="FedEx"
@@ -168,7 +168,7 @@ const Checkout = () => {
                       </div>
 
                       <div className="col-span-6 sm:col-span-3">
-                        <InputShipping
+                        <InputDelivery
                           handleShippingCost={handleShippingCost}
                           register={register}
                           value="UPS"
@@ -186,7 +186,7 @@ const Checkout = () => {
                     </h2>
                     {showCard && (
                       <div className="mb-3">
-                        <CardElement />{' '}
+                        <CardElement />{" "}
                         <p className="text-red-400 text-sm mt-1">{error}</p>
                       </div>
                     )}
@@ -232,9 +232,9 @@ const Checkout = () => {
                         disabled={isEmpty || !stripe || isCheckoutSubmit}
                         className="bg-emerald-500 hover:bg-emerald-600 border border-emerald-500 transition-all rounded py-3 text-center text-sm font-serif font-medium text-white flex justify-center w-full"
                       >
-                        Confirm Order{' '}
+                        Confirm Order{" "}
                         <span className="text-xl ml-2">
-                          {' '}
+                          {" "}
                           <IoArrowForward />
                         </span>
                       </button>
@@ -271,8 +271,8 @@ const Checkout = () => {
                   <form className="w-full">
                     {couponInfo.couponCode ? (
                       <span className="bg-emerald-50 px-4 py-3 leading-tight w-full rounded-md flex justify-between">
-                        {' '}
-                        <p className="text-emerald-600">Coupon Applied </p>{' '}
+                        {" "}
+                        <p className="text-emerald-600">Coupon Applied </p>{" "}
                         <span className="text-red-500 text-right">
                           {couponInfo.couponCode}
                         </span>
@@ -302,7 +302,7 @@ const Checkout = () => {
                   </span>
                 </div>
                 <div className="flex items-center py-2 text-sm w-full font-semibold text-gray-500 last:border-b-0 last:text-base last:pb-0">
-                  Shipping Cost
+                  Delivery Cost
                   <span className="ml-auto flex-shrink-0 text-gray-800 font-bold">
                     ${shippingCost.toFixed(2)}
                   </span>
@@ -317,7 +317,7 @@ const Checkout = () => {
                   <div className="flex items-center font-bold font-serif justify-between pt-5 text-sm uppercase">
                     Total cost
                     <span className="font-serif font-extrabold text-lg">
-                      {' '}
+                      {" "}
                       ${Math.round(total)}.00
                     </span>
                   </div>
