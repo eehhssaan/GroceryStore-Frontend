@@ -1,15 +1,15 @@
-import React from 'react';
-import Image from 'next/image';
-import { useForm } from 'react-hook-form';
+import React from "react";
+import Image from "next/image";
+import { useForm } from "react-hook-form";
 
 //internal import
-import Layout from '@layout/Layout';
-import Label from '@component/form/Label';
-import Error from '@component/form/Error';
-import { contactData } from '@utils/data';
-import { notifySuccess } from '@utils/toast';
-import InputArea from '@component/form/InputArea';
-import PageHeader from '@component/header/PageHeader';
+import Layout from "@layout/Layout";
+import Label from "@component/form/Label";
+import Error from "@component/form/Error";
+import { contactData } from "@utils/data";
+import { notifySuccess } from "@utils/toast";
+import InputArea from "@component/form/InputArea";
+import PageHeader from "@component/header/PageHeader";
 
 const ContactUs = () => {
   const {
@@ -20,7 +20,7 @@ const ContactUs = () => {
 
   const submitHandler = () => {
     notifySuccess(
-      'your message sent successfully. We will contact you shortly.'
+      "your message sent successfully. We will contact you shortly."
     );
   };
 
@@ -31,7 +31,7 @@ const ContactUs = () => {
       <div className="bg-white">
         <div className="max-w-screen-2xl mx-auto lg:py-20 py-10 px-4 sm:px-10">
           {/* contact promo */}
-          <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3 xl:gap-8 font-serif">
+          <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-2 xl:gap-8 font-serif">
             {contactData.map((data) => (
               <div key={data.id} className="border p-10 rounded-lg text-center">
                 <span className="flex justify-center text-4xl text-emerald-500 mb-4">
@@ -44,7 +44,7 @@ const ContactUs = () => {
                     className="text-emerald-500"
                   >
                     {data.contact}
-                  </a>{' '}
+                  </a>{" "}
                   {data.info}
                 </p>
               </div>
@@ -52,7 +52,7 @@ const ContactUs = () => {
           </div>
 
           {/* contact form */}
-          <div className="px-0 pt-24 mx-auto items-center flex flex-col md:flex-row w-full justify-between">
+          {/* <div className="px-0 pt-24 mx-auto items-center flex flex-col md:flex-row w-full justify-between">
             <div className="hidden md:w-full lg:w-5/12 lg:flex flex-col h-full">
               <Image
                 width={874}
@@ -137,7 +137,7 @@ const ContactUs = () => {
                 </div>
               </form>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>
