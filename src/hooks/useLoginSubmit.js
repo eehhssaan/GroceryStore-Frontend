@@ -1,13 +1,13 @@
-import Cookies from 'js-cookie';
-import { useRouter } from 'next/router';
-import { useContext, useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { GoogleLogin } from 'react-google-login';
+import Cookies from "js-cookie";
+import { useRouter } from "next/router";
+import { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
+import { GoogleLogin } from "@react-oauth/google";
 
 //internal import
-import UserServices from '@services/UserServices';
-import { UserContext } from '@context/UserContext';
-import { notifyError, notifySuccess } from '@utils/toast';
+import UserServices from "@services/UserServices";
+import { UserContext } from "@context/UserContext";
+import { notifyError, notifySuccess } from "@utils/toast";
 
 const useLoginSubmit = (setModalOpen) => {
   const router = useRouter();
@@ -38,10 +38,10 @@ const useLoginSubmit = (setModalOpen) => {
         .then((res) => {
           setLoading(false);
           setModalOpen(false);
-          router.push(redirect || '/');
-          notifySuccess('Login Success!');
-          dispatch({ type: 'USER_LOGIN', payload: res });
-          Cookies.set('userInfo', JSON.stringify(res));
+          router.push(redirect || "/");
+          notifySuccess("Login Success!");
+          dispatch({ type: "USER_LOGIN", payload: res });
+          Cookies.set("userInfo", JSON.stringify(res));
         })
         .catch((err) => {
           notifyError(err ? err.response.data.message : err.message);
@@ -65,7 +65,7 @@ const useLoginSubmit = (setModalOpen) => {
         .then((res) => {
           setLoading(false);
           notifySuccess(res.message);
-          setValue('verifyEmail');
+          setValue("verifyEmail");
         })
         .catch((err) => {
           setLoading(false);
@@ -73,21 +73,35 @@ const useLoginSubmit = (setModalOpen) => {
         });
     }
   };
+  function parseJwt(token) {
+    var base64Url = token.split(".")[1];
+    var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+    var jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split("")
+        .map(function (c) {
+          return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        })
+        .join("")
+    );
 
-  const handleGoogleSignIn = (user) => {
-    console.log('google sign in', user);
-    if (user.profileObj.name) {
+    return JSON.parse(jsonPayload);
+  }
+
+  const handleGoogleSignIn = (userResp) => {
+    const user = parseJwt(userResp.credential);
+    if (user.name) {
       UserServices.signUpWithProvider({
-        name: user.profileObj.name,
-        email: user.profileObj.email,
-        image: user.profileObj.imageUrl,
+        name: user.name,
+        email: user.email,
+        image: user.imageUrl,
       })
         .then((res) => {
           setModalOpen(false);
-          notifySuccess('Login success!');
-          router.push(redirect || '/');
-          dispatch({ type: 'USER_LOGIN', payload: res });
-          Cookies.set('userInfo', JSON.stringify(res));
+          notifySuccess("Login success!");
+          router.push(redirect || "/");
+          dispatch({ type: "USER_LOGIN", payload: res });
+          Cookies.set("userInfo", JSON.stringify(res));
         })
 
         .catch((err) => {
