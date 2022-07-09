@@ -50,7 +50,7 @@ const Common = ({ setModalOpen }) => {
         <div className="flex justify-between flex-col lg:flex-row">
           <FacebookLogin
             appId="399067022261794"
-            autoLoad={true}
+            autoLoad={false}
             fields="name,email,picture"
             // onClick={componentClicked}
             callback={handleFacebookSignIn}
