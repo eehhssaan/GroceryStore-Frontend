@@ -3,19 +3,7 @@ import React, { FC, useEffect } from "react";
 
 const gtmCode = `${process.env.GTM_ID}`;
 
-export interface MetaProps {
-  title: string;
-  description?: string;
-  canonical?: string;
-  keywords?: string;
-}
-
-export const Meta: FC<MetaProps> = ({
-  title,
-  canonical,
-  keywords,
-  description,
-}) => {
+const Meta = (title, canonical, keywords, description) => {
   return (
     <NextHead>
       <meta charSet="utf-8" />
@@ -120,3 +108,5 @@ export const Meta: FC<MetaProps> = ({
     </NextHead>
   );
 };
+
+export default Meta;

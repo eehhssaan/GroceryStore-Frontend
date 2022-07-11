@@ -8,9 +8,9 @@ import FooterTop from "@layout/footer/FooterTop";
 import MobileFooter from "@layout/footer/MobileFooter";
 import FeatureCard from "@component/feature-card/FeatureCard";
 import NavBarTop from "./navbar/NavBarTop";
-import { Meta } from "../component/meta";
+import Meta from "@component/meta/Meta";
 
-const Layout = ({ title, description, children, canonical }) => {
+const Layout = ({ title, keywords, description, children, canonical }) => {
   return (
     <>
       <Meta {...{ title, keywords, description, canonical }} />
