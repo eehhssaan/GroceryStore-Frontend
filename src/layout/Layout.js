@@ -17,7 +17,7 @@ const Layout = ({ title, description, children }) => {
       <ToastContainer />
       <div className="font-sans">
         <Head>
-        <Meta {...{ title, keywords, description, canonical }} />
+        <Meta {...{title, description, children }} />
           <title>
             {title
               ? `KachaBazar | ${title}`
