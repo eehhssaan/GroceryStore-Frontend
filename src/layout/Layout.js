@@ -8,6 +8,8 @@ import FooterTop from "@layout/footer/FooterTop";
 import MobileFooter from "@layout/footer/MobileFooter";
 import FeatureCard from "@component/feature-card/FeatureCard";
 import NavBarTop from "./navbar/NavBarTop";
+import { Meta } from '@component/meta/Meta'
+
 
 const Layout = ({ title, description, children }) => {
   return (
@@ -15,6 +17,7 @@ const Layout = ({ title, description, children }) => {
       <ToastContainer />
       <div className="font-sans">
         <Head>
+          <Meta {...{ title, keywords, description, canonical }} />
           <title>
             {title
               ? `KachaBazar | ${title}`
