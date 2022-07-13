@@ -112,3 +112,6 @@ export const Meta: FC<MetaProps> = ({ title, canonical, keywords, description })
     </NextHead>
   );
 };
+
+export default Meta;
+
