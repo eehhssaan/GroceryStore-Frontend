@@ -13,7 +13,7 @@ import Meta from "@component/meta/Meta";
 const Layout = ({ title, keywords, description, children, canonical }) => {
   return (
     <>
-      <Meta {...{ title, keywords, description, canonical }} />
+      <Meta  />
       <ToastContainer />
       <div className="font-sans">
         <Head>
