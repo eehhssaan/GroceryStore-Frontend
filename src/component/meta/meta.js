@@ -113,7 +113,9 @@ const gtmCode = `${process.env.GTM_ID}`;
 
 const Meta = () => {
   return (
-<h1>this</h1>
+    <h1>
+      this
+    </h1>
   );
 };
 
