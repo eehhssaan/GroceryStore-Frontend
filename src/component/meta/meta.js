@@ -1,6 +1,7 @@
 import NextHead from "next/head";
 import React, { FC, useEffect } from "react";
 
+
 const gtmCode = `${process.env.GTM_ID}`;
 
 const Meta = (title, canonical, keywords, description) => {
