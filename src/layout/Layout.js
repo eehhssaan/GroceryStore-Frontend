@@ -25,7 +25,9 @@ const Layout = ({ title, description, children }) => {
         </Head>
         {/* <NavBarTop /> */}
         <Navbar />
-        <div className="bg-gray-50">{children}</div>
+        <div className="bg-gray-50"> 
+          {children}
+        </div>
         <MobileFooter />
         <div className="w-full">
           <FooterTop />
