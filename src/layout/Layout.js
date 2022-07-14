@@ -8,7 +8,7 @@ import FooterTop from "@layout/footer/FooterTop";
 import MobileFooter from "@layout/footer/MobileFooter";
 import FeatureCard from "@component/feature-card/FeatureCard";
 import NavBarTop from "./navbar/NavBarTop";
-import Meta from '@component/meta/Meta.tsx'
+// import Meta from '@component/meta/Meta.tsx'
 
 
 const Layout = ({ title, description, children }) => {
@@ -17,7 +17,6 @@ const Layout = ({ title, description, children }) => {
       <ToastContainer />
       <div className="font-sans">
         <Head>
-        <Meta {...{title, description, children }} />
           <title>
             {title
               ? `KachaBazar | ${title}`
@@ -25,10 +24,25 @@ const Layout = ({ title, description, children }) => {
           </title>
           {description && <meta name="description" content={description} />}
           <link ref="icon" href="/favicon.png" />
+          <script
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5D69842');`,
+          }}
+        />
+   
         </Head>
         {/* <NavBarTop /> */}
         <Navbar />
-        <div className="bg-gray-50">{children}</div>
+        <div className="bg-gray-50"> 
+          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D69842"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          {children}
+        </div>
         <MobileFooter />
         <div className="w-full">
           <FooterTop />
