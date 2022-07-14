@@ -16,9 +16,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
   const [value, set] = useSessionstorage("products", products);
 
   return (
-    <GoogleOAuthProvider
-      clientId={`${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}`}
-    >
+    <>
       <Layout>
         <div className="min-h-screen">
           <StickyCart />
@@ -117,7 +115,7 @@ const Home = ({ products, popularProducts, discountProducts }) => {
           </div>
         </div>
       </Layout>
-    </GoogleOAuthProvider>
+    </>
   );
 };
 
