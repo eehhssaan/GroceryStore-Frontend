@@ -8,8 +8,6 @@ import FooterTop from "@layout/footer/FooterTop";
 import MobileFooter from "@layout/footer/MobileFooter";
 import FeatureCard from "@component/feature-card/FeatureCard";
 import NavBarTop from "./navbar/NavBarTop";
-// import Meta from '@component/meta/Meta.tsx'
-
 
 const Layout = ({ title, description, children }) => {
   return (
@@ -39,8 +37,8 @@ const Layout = ({ title, description, children }) => {
         {/* <NavBarTop /> */}
         <Navbar />
         <div className="bg-gray-50"> 
-          <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D69842"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+          {/* <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D69842"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> */}
           {children}
         </div>
         <MobileFooter />
