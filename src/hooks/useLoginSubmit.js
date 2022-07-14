@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { GoogleLogin } from "@react-oauth/google";
+import FacebookLogin from "react-facebook-login";
 
 //internal import
 import UserServices from "@services/UserServices";
@@ -111,13 +112,37 @@ const useLoginSubmit = (setModalOpen) => {
     }
   };
 
+  const handleFacebookSignIn = (user) => {
+    console.log(user);
+    if (user.name) {
+      UserServices.signUpWithProvider({
+        name: user.name,
+        email: user.email,
+        image: user.imageUrl,
+      })
+        .then((res) => {
+          setModalOpen(false);
+          notifySuccess("Login success!");
+          router.push(redirect || "/");
+          dispatch({ type: "USER_LOGIN", payload: res });
+          Cookies.set("userInfo", JSON.stringify(res));
+        })
+        .catch((err) => {
+          notifyError(err.message);
+          setModalOpen(false);
+        });
+    }
+  };
+
   return {
     handleSubmit,
     submitHandler,
     handleGoogleSignIn,
+    handleFacebookSignIn,
     register,
     errors,
     GoogleLogin,
+    FacebookLogin,
     loading,
   };
 };
