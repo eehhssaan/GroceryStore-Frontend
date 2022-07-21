@@ -95,7 +95,7 @@ const Checkout = () => {
                           label="Phone number"
                           name="contact"
                           type="tel"
-                          placeholder="+062-6532956"
+                          placeholder="+852-65329556"
                         />
 
                         <Error errorName={errors.contact} />
@@ -115,7 +115,7 @@ const Checkout = () => {
                           label="Street address"
                           name="address"
                           type="text"
-                          placeholder="123 Boulevard Rd, Beverley Hills"
+                          placeholder="Flat 63,7/F, Ricarp Building, Nathan Road"
                         />
                         <Error errorName={errors.address} />
                       </div>
@@ -202,7 +202,7 @@ const Checkout = () => {
                         <Error errorName={errors.paymentMethod} />
                       </div>
 
-                      <div className="col-span-6 sm:col-span-3">
+                      {/* <div className="col-span-6 sm:col-span-3">
                         <InputPayment
                           setShowCard={setShowCard}
                           register={register}
@@ -211,7 +211,7 @@ const Checkout = () => {
                           Icon={ImCreditCard}
                         />
                         <Error errorName={errors.paymentMethod} />
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 

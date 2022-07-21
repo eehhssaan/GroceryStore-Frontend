@@ -233,7 +233,7 @@ const Footer = () => {
                 />
               </a>
             </Link>
-            <p className="leading-7 font-sans text-sm text-gray-600 mt-3">
+            {/* <p className="leading-7 font-sans text-sm text-gray-600 mt-3">
               <span>
                 987 Andre Plain Suite High Street 838, <br /> Lake Hestertown,
                 USA
@@ -242,7 +242,7 @@ const Footer = () => {
               <span>Tell: 02.356.1666</span>
               <br />
               <span>Email: ccruidk@test.com</span>
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -251,21 +251,18 @@ const Footer = () => {
 
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-10 flex justify-center py-4">
         <p className="text-sm text-gray-500 leading-6">
-          Copyright 2022 @Ehsan, All rights reserved.
-        </p>
-        {/* <p className="text-sm text-gray-500 leading-6">
-          Copyright 2022 @{" "}
-          <Link href="https://themeforest.net/user/htmllover">
+          Copyright 2022 @{""}
+          <Link href="https://www.linkedin.com/in/ayazehsan/">
             <a
               target="_blank"
               rel="noopener noreferrer"
               className="text-emerald-500"
             >
-              Ehsan
+            Ehsan
             </a>
           </Link>
           , All rights reserved.
-        </p> */}
+        </p>
       </div>
     </div>
   );
