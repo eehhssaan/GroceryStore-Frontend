@@ -115,7 +115,7 @@ const Checkout = () => {
                           label="Street address"
                           name="address"
                           type="text"
-                          placeholder="Flat 63,7/F, Ricarp Building, Nathan Road"
+                          placeholder="Flat 63, 7/F, Ricarp Building, Nathan Road"
                         />
                         <Error errorName={errors.address} />
                       </div>
